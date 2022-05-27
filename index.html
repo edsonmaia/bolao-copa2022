@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" href="images/favicon.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolão da Copa</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<main>
+
+    <h1 id="tituloPrincipal">Bolão da Copa do Mundo 2022</h1>
+
+    <p class="alert alert-info">Escolha quais serão as duas seleções que irão se classificar em cada grupo. Por ordem, 1ª e 2ª colocação. Após as escolhas, automaticamente passará para o próximo grupo.</p>
+
+    <section class="cardGrupo">
+
+        <h2 class="nomeGrupo">Grupo</h2>
+
+        <div class="selecoes" draggable="true">
+            <img class="bandeiraP" src="images/bandeiras/bandeira_padrao.svg" alt="" />
+            <span class="nomeSelecao">Selecao1</span>
+        </div>
+        <div class="selecoes" draggable="true">
+            <img class="bandeiraP" src="images/bandeiras/bandeira_padrao.svg" alt="" />
+            <span class="nomeSelecao">Selecao2</span>
+        </div>
+        <div class="selecoes" draggable="true">
+            <img class="bandeiraP" src="images/bandeiras/bandeira_padrao.svg" alt="" />
+            <span class="nomeSelecao">Selecao3</span>
+        </div>
+        <div class="selecoes" draggable="true">
+            <img class="bandeiraP" src="images/bandeiras/bandeira_padrao.svg" alt="" />
+            <span class="nomeSelecao">Selecao4</span>
+        </div>
+
+    </section>
+
+    <div class="observacao">
+        Grupo B -> EUR = País de Gales ou Escócia ou Ucrânia <br>
+        Grupo D -> PL1 = Emirados Árabes ou Austrália ou Peru <br>
+        Grupo E -> PL2 = Costa Rica ou Nova Zelândia
+    </div>
+
+    <section class="cardGrupoClassificado">
+
+        <h2 class="classificados">Classificados</h2>
+
+        <div class="classificadas">
+            <span class="colocacao">1</span>
+            <div class="selecaoClassificada" data-name="1"></div>
+            
+            <span class="colocacao">2</span>
+            <div class="selecaoClassificada" data-name="2"></div>
+        </div>
+
+    </section>
+ 
+    <!-- card para exibir jogos das fases eliminatorias -->
+    <section class="cardJogo">
+        <h2 class="fase">Oitavas</h2>
+        <div class="oitavas">
+            <span class="numero">1</span>
+            <div class="jogo">
+                <div class="selecoes" id="mandante" draggable="true">
+                </div>
+                <div class="selecoes" id="visitante" draggable="true">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- card para escolher quem vai ganhar cada jogo eliminatorio -->
+    <section class="cardVitorioso">
+        <h2 class="classificados">Quem ganha?</h2>
+        <div class="classificadas">
+            <div class="selecaoClassificada" data-name="1"></div>
+        </div>
+    </section>
+
+    <!-- /cards para escolhas das fases eliminatórias -->
+
+    <br>
+
+</main> 
+
+    <script src="js/grupos.js"></script>
+    <script src="js/crud.js"></script>
+    <script src="js/drag-and-drop.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
